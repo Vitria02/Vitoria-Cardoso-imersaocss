@@ -31,7 +31,12 @@ header {
 	justify-content: center;
 	align-items: center;
 }
-
+.apresentacion{
+	border-radius: 5px;
+    animation: LoadboxShadow 1.75s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+}
 .menu {
 	Background-color: black;
 	position: fixed;
@@ -73,4 +78,6 @@ a.hover {
 .img-portfolio {
 	height: 180px;
 	width: 180px;
+	color: black;
+	font-style: italic;
 }
