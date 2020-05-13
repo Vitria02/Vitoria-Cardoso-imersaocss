@@ -5,8 +5,8 @@
 }
 
 body {
-    background: rgb(248, 164, 230);   
-	Font-family: Arial;
+    background: rgb(250, 181, 244);   
+	Font-family:'Playfair Display', serif;;
 	font-size: 10px;
 }
 
@@ -15,28 +15,26 @@ body {
 		font-size: 14px;
 	}
 }
+
 @media(min-widht:600px) {
 	body{
 		font-size: 18px;
 	}
 }
+
 @media(min-widht:1200px) {
 	body{
 		font-size: 20px;
 	}
 }
+
 header { 
-	height:50vh;
+	height:100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.apresentacion{
-	border-radius: 5px;
-    animation: LoadboxShadow 1.75s;
-    animation-delay: 1.75s;
-    animation-fill-mode: forwards;
-}
+
 .menu {
 	Background-color: black;
 	position: fixed;
@@ -66,18 +64,60 @@ a.hover {
 	display: block;
 	padding: 10px 20px;
 }
+
 .site-subtitle, .site-title{
 	Color: rgb(19, 138, 235);	
 	text-align: center;
+	font-family: 'Sacramento', cursive;
+	font-size: 3em
 }
 
 .site-subtitle{
 	 Font-style: italic; 
+	 font-family:'Tangerine', cursive;;
+	 line-height: 1,8;
+}
+
+.portfolio {
+	padding: 1.8em;
+}
+
+.portfolio h2 {
+	font-family: 'Playfair Display', serif;
+	text-align: center;
+	margin-bottom: 1.5em;
+	font-size: 2em;
+}
+
+@media (min-width: 560px) {
+	.portfolio .grid {
+	grid-template-columns: 240px 240px;
+	}
+}
+
+@media (min-width: 880px) {
+	.portfolio .grid {
+	grid-template-columns: repeat(3,240px);
+	justify-content: center;
+	align-content: center;
+	height: calc(100vh - 8em - 48px);
+	}
+}
+.portfolio .grid{
+	display: grid;
+	gap: 2em;
+}
+
+.portfolio . figure {
+	text-align: center;
 }
 
 .img-portfolio {
 	height: 180px;
-	width: 180px;
+	width: 240px;
+	object-fit: cover;
+	object-position: center;
 	color: black;
-	font-style: italic;
 }
+
+
