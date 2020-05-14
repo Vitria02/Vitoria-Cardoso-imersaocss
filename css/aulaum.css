@@ -42,8 +42,19 @@ header {
 	top:0;
 }
 
+.menu a {
+	display: block;
+	padding: 10px 20px;
+	transition: background-color 1s, color 1s;
+}
+
+.menu a:hover {
+	background-color:rgb(100, 247, 215) ;
+	color: black;
+}
+
 a {
-    color: rgb(9, 245, 233);
+    color: rgb(100, 247, 215);
  	text-decoration: none;
 }
 
@@ -60,9 +71,21 @@ a.hover {
     List-style:none;
 }
 
-.menu a {
-	display: block;
-	padding: 10px 20px;
+.titulo{
+	transform: scale(0.2) translateY(50vh);
+	opacity: 0;
+	animation:2s linear 1s animacaoTitulo forwards ;
+}
+
+@keyframes animacaoTitulo{
+	0%{
+		transform: scale(0.2) translateY(50vh);
+		opacity: 0;
+	}
+	100%{
+		transform: scale(1) translateY(0);
+		opacity: 1;
+	}
 }
 
 .site-subtitle, .site-title{
@@ -78,10 +101,13 @@ a.hover {
 	 line-height: 1,8;
 }
 
+.contato,
 .portfolio {
 	padding: 1.8em;
+	min-height: 100vh;
 }
 
+.contato h2,
 .portfolio h2 {
 	font-family: 'Playfair Display', serif;
 	text-align: center;
@@ -91,7 +117,7 @@ a.hover {
 
 @media (min-width: 560px) {
 	.portfolio .grid {
-	grid-template-columns: 240px 240px;
+	grid-template-columns: 240px 240px 240px;
 	}
 }
 
@@ -101,8 +127,10 @@ a.hover {
 	justify-content: center;
 	align-content: center;
 	height: calc(100vh - 8em - 48px);
+	
 	}
 }
+
 .portfolio .grid{
 	display: grid;
 	gap: 2em;
@@ -118,6 +146,26 @@ a.hover {
 	object-fit: cover;
 	object-position: center;
 	color: black;
+	transition: transform 500ms;
 }
 
+.img-portfolio:hover{
+	transform: scale(1.2);
+}
+
+.contato .icons {
+	text-align: center;
+}
+
+.contato a {
+	color:rgb(9, 245, 194);
+	font-size: 8em;
+	transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover{
+	text-decoration: none;
+	text-shadow:0px 0px 10px rgb(154, 67, 189);
+}
 
