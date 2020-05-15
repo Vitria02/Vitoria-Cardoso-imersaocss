@@ -54,7 +54,7 @@ header {
 }
 
 a {
-    color: rgb(100, 247, 215);
+	color:rgb(100, 247, 215);
  	text-decoration: none;
 }
 
@@ -101,12 +101,23 @@ a.hover {
 	 line-height: 1,8;
 }
 
+.sobre,
 .contato,
 .portfolio {
 	padding: 1.8em;
 	min-height: 100vh;
+	
 }
 
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
 	font-family: 'Playfair Display', serif;
@@ -115,9 +126,45 @@ a.hover {
 	font-size: 2em;
 }
 
+.sobre p{
+	color: black;
+	font: 18px;
+	text-indent: 3em;
+	margin-bottom: 0.5em;
+	text-align: justify;
+}
+
+.sobre a{
+	color: rgb(95, 242, 227);
+	font: 18px;
+	text-decoration: underline;
+}
+
+.sobre .avatar {
+	float: right;
+	margin-left: 1em;
+}
+
+.sobre .avatar img {
+	height:300px;
+	width: 300px;
+}
+
+.sobre .tit {
+	text-align: center;
+	font: 400em;
+	font-style: unset;
+
+}
+
+.portfolio .grid{
+	display: grid;
+	gap: 2em;
+}
+
 @media (min-width: 560px) {
 	.portfolio .grid {
-	grid-template-columns: 240px 240px 240px;
+	grid-template-columns: 240px;
 	}
 }
 
@@ -131,21 +178,15 @@ a.hover {
 	}
 }
 
-.portfolio .grid{
-	display: grid;
-	gap: 2em;
-}
-
 .portfolio . figure {
 	text-align: center;
 }
 
-.img-portfolio {
-	height: 180px;
+.img-portfolio  {
+	color: rgb(154, 67, 189); height: 180px;
 	width: 240px;
 	object-fit: cover;
 	object-position: center;
-	color: black;
 	transition: transform 500ms;
 }
 
